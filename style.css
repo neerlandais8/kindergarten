@@ -16,13 +16,33 @@ img {
     height: auto;
 }
 
+/* Mobile default */
 #logo,
 #comingsoon {
     width: 90%;
     max-width: 700px;
 }
 
-@media (min-width: 768px) {
+/* Tablet portrait */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    header,
+    .comingsoon {
+        padding: 20px 24px;
+    }
+
+    #logo {
+        width: 60%;
+        max-width: 560px;
+    }
+
+    #comingsoon {
+        width: 72%;
+        max-width: 680px;
+    }
+}
+
+/* Desktop and tablet landscape */
+@media (min-width: 1025px) {
     #logo,
     #comingsoon {
         width: 30%;
