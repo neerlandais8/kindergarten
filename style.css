@@ -1,29 +1,29 @@
 body {
+    margin: 0;
     background-color: white;
 }
 
-header {
-    display: flex;
-    position: relative;
-    justify-content: center;
-
-
-}
-
-#logo {
-    width: 30%;
-}
-
+header,
 .comingsoon {
-    position: relative;
-    top: 10px;
     display: flex;
     justify-content: center;
-    width: auto;
+    padding: 12px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
     height: auto;
 }
 
+#logo,
 #comingsoon {
     width: 30%;
-    height: auto;
+}
+
+@media (min-width: 768px) {
+    #logo,
+    #comingsoon {
+        width: 30%;
+    }
 }
