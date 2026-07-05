@@ -1,7 +1,14 @@
 body {
     margin: 0;
-    background-color: white;
+    background-color: var(--bg);
+    color: var(--text);
     font-family: "myriad-pro", sans-serif;
+}
+
+:root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --text: #111111;
 }
 
 header,
@@ -9,6 +16,18 @@ header,
     display: flex;
     justify-content: center;
     padding: 12px;
+}
+
+header picture {
+    display: block;
+    width: 90%;
+    max-width: 700px;
+}
+
+#logo {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 img {
@@ -24,15 +43,27 @@ img {
 }
 
 footer {
+    color: var(--text);
     position: fixed;
     bottom: 5px;
     text-align: center;
     font-size: 14px;
     width: 100%;
-
 }
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) and (max-width: 1024px) {
+    :root {
+        --bg:#0f1115;
+        --text:#f3f5f7;
+    }
+    #logo {
+        filter: brightness(0) invert(1);
+    }
+}
+
 /* Mobile default */
-#logo,
+header picture,
 #comingsoon {
     width: 90%;
     max-width: 700px;
@@ -45,7 +76,7 @@ footer {
         padding: 20px 24px;
     }
 
-    #logo {
+    header picture {
         width: 60%;
         max-width: 560px;
     }
@@ -63,7 +94,7 @@ footer {
         padding: 18px 28px;
     }
 
-    #logo {
+    header picture {
         width: 46%;
         max-width: none;
     }
@@ -76,9 +107,8 @@ footer {
 
 /* Desktop */
 @media (min-width: 1367px) {
-    #logo,
-    #comingsoon {
-        width: 30%;
-        max-width: 700px;
-    }
-}
+   header picture,
+   #comingsoon {
+    width: 30%;
+    max-width: 700px;
+   }
