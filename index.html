@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f1115">
     <link rel="stylesheet" href="https://use.typekit.net/cel7bew.css">
     <title>Kindergarten</title>
     <link rel="stylesheet" href="style.css">
@@ -21,10 +24,9 @@
       <a href="https://www.instagram.com/rena_jansen/" target="_blank">
         <img id="instagram-logo" src="images/instagram-logo.jpg" alt="Instagram">
       </a>
-    
     </div>
     <footer>
-      RENA JANSEN © 2026
+       © 2026
     </footer>
 
     <script>
@@ -35,6 +37,15 @@
   document.addEventListener('dragstart', function (e) {
     if (e.target.tagName === 'IMG') e.preventDefault();
   });
+    (function () {
+    const logo = document.getElementById('logo');
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    const setLogo = () => {
+      logo.src = mq.matches ? 'images/LOGO-dark.png' : 'images/LOGO.png';
+    };
+    setLogo();
+    mq.addEventListener ? mq.addEventListener('change', setLogo) : mq.addListener(setLogo);
+  })();
 </script>
 </body>
 </html>
