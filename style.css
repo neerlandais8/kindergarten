@@ -52,7 +52,7 @@ footer {
 }
 
 /* Dark mode */
-@media (prefers-color-scheme: dark) and (max-width: 1024px) {
+@media (prefers-color-scheme: dark) {
     :root {
         --bg:#0f1115;
         --text:#f3f5f7;
