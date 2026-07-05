@@ -42,6 +42,18 @@ img {
     pointer-events: auto;
 }
 
+.contact {
+    display: flex;
+    justify-content: center;
+}
+
+#instagram-logo {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 footer {
     color: var(--text);
     position: fixed;
@@ -56,6 +68,9 @@ footer {
     :root {
         --bg:#0f1115;
         --text:#f3f5f7;
+    }
+    #instagram-logo {
+        filter: invert(1);
     }
 }
 
