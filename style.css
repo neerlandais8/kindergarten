@@ -57,7 +57,7 @@ img {
 footer {
     color: var(--text);
     position: relative;
-    bottom: 2px;
+    bottom: 5px;
     text-align: center;
     font-size: 14px;
     width: 100%;
