@@ -1,6 +1,7 @@
 body {
     margin: 0;
     background-color: white;
+    font-family: "myriad-pro", sans-serif;
 }
 
 header,
@@ -22,6 +23,14 @@ img {
     pointer-events: auto;
 }
 
+footer {
+    position: fixed;
+    bottom: 5px;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+
+}
 /* Mobile default */
 #logo,
 #comingsoon {
